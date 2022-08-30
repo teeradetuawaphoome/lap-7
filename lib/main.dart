@@ -50,9 +50,7 @@ class _MyAppState extends State<MyApp> {
         onPressed: () => buttonPressed(buttonLabel),
         child: Text(
           buttonLabel,
-          style: TextStyle(
-            fontSize: 20,
-          ),
+          style: TextStyle(fontSize: 40, color: Colors.red),
         ),
       ),
     );
@@ -64,7 +62,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Calculator"),
+          title: Text("เครื่องคิดเลข"),
         ),
         body: Column(
           children: [
@@ -73,7 +71,10 @@ class _MyAppState extends State<MyApp> {
               alignment: Alignment.centerRight,
               child: Text(
                 result,
-                style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 48,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
               ),
             ),
             Expanded(
@@ -124,6 +125,7 @@ class _MyAppState extends State<MyApp> {
           ],
         ),
       ),
+      theme: ThemeData(primaryColor: Colors.red),
     );
   }
 }
